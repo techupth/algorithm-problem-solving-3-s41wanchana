@@ -1,5 +1,15 @@
 function sortStudentsByScore(students) {
   // เริ่มเขียนโค้ดตรงนี้จ้า
+  for (let i = 0; i < students.length - 1; i++) {
+    for (let j = 0; j < students.length - 1 - i; j++) {
+      if (students[j].score < students[j + 1].score) {
+        let temp = students[j];
+        students[j] = students[j + 1];
+        students[j + 1] = temp;
+      }
+    }
+  }
+  return students;
 }
 
 students = [
@@ -11,4 +21,4 @@ students = [
   { id: "S006", name: "Fah", score: 80 },
 ];
 
-console.log(sortStudentsByScore(students));
+sortStudentsByScore(students);
