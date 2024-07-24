@@ -12,7 +12,7 @@ function sortCustomerName(customers) {
   return customers;
 }
 customers = ["Somchai", "Arthit", "Suchada", "Napasorn", "Pimchanok"];
-console.log(sortCustomerName(customers));
+sortCustomerName(customers);
 
 // ตอบคำถามตรงนี้จ้า
 
